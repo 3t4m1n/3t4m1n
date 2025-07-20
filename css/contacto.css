@@ -1,0 +1,375 @@
+/* 
+   ESTILOS ESPECÍFICOS PARA LA PÁGINA DE CONTACTO
+   Formulario de contacto e información del proyecto
+*/
+
+/* Sección principal de contacto */
+.seccion-contacto {
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 50%, #fdba74 100%);
+  min-height: 80vh;
+}
+
+/* Grid de contacto */
+.grid-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Columna del formulario */
+.columna-formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-formulario {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.titulo-formulario {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #ea580c;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Formulario */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grupo-campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.etiqueta-campo {
+  font-weight: 600;
+  color: #ea580c;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.campo-entrada {
+  padding: 0.75rem 1rem;
+  border: 2px solid rgba(251, 146, 60, 0.2);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  color: #ea580c;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.campo-entrada:focus {
+  outline: none;
+  border-color: #fb923c;
+  box-shadow: 0 0 15px rgba(251, 146, 60, 0.3);
+}
+
+.campo-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Mensajes de error */
+.mensaje-error {
+  color: #dc2626;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.mensaje-error.visible {
+  display: block;
+}
+
+/* Botón de envío */
+.boton-enviar {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.boton-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(251, 146, 60, 0.3);
+}
+
+.boton-enviar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Mensaje de confirmación */
+.mensaje-confirmacion {
+  text-align: center;
+  padding: 2rem;
+  background: #f0fdf4;
+  border: 2px solid #86efac;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.icono-confirmacion {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.titulo-confirmacion {
+  color: #16a34a;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.texto-confirmacion {
+  color: #22c55e;
+}
+
+/* Columna de información */
+.columna-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tarjeta-info {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.titulo-info {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ea580c;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Secciones de información */
+.seccion-info {
+  margin-bottom: 2rem;
+}
+
+.seccion-info:last-child {
+  margin-bottom: 0;
+}
+
+.subtitulo-info {
+  color: #ea580c;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contenido-info {
+  color: #fb923c;
+  line-height: 1.6;
+}
+
+.contenido-info p {
+  margin-bottom: 0.5rem;
+}
+
+.contenido-info strong {
+  color: #ea580c;
+}
+
+/* Lista de tecnologías */
+.lista-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tecnologia {
+  background: #fed7aa;
+  color: #ea580c;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Listas */
+.lista-objetivos,
+.lista-caracteristicas {
+  color: #fb923c;
+  padding-left: 1rem;
+}
+
+.lista-objetivos li,
+.lista-caracteristicas li {
+  margin-bottom: 0.5rem;
+}
+
+/* Tarjeta de redes sociales */
+.tarjeta-redes {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.titulo-redes {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ea580c;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.enlaces-redes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.enlace-red {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(251, 146, 60, 0.1);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+  border-radius: 0.5rem;
+  color: #ea580c;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.enlace-red:hover {
+  background: rgba(251, 146, 60, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(251, 146, 60, 0.2);
+}
+
+.icono-red {
+  font-size: 1.25rem;
+}
+
+.nombre-red {
+  font-weight: 500;
+}
+
+/* Estados del formulario */
+.campo-entrada.error {
+  border-color: #dc2626;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+}
+
+.campo-entrada.valido {
+  border-color: #16a34a;
+  box-shadow: 0 0 10px rgba(22, 163, 74, 0.3);
+}
+
+/* Animaciones */
+@keyframes envioExitoso {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.mensaje-confirmacion.mostrar {
+  animation: envioExitoso 0.5s ease-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .grid-contacto {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .tarjeta-formulario,
+  .tarjeta-info {
+    padding: 1.5rem;
+  }
+
+  .titulo-formulario {
+    font-size: 1.5rem;
+  }
+
+  .enlaces-redes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion-contacto {
+    padding: 2rem 1rem;
+  }
+
+  .tarjeta-formulario,
+  .tarjeta-info,
+  .tarjeta-redes {
+    padding: 1rem;
+  }
+
+  .formulario-contacto {
+    gap: 1rem;
+  }
+
+  .lista-tecnologias {
+    justify-content: center;
+  }
+}
+
+/* Estados de carga */
+.boton-enviar.cargando {
+  position: relative;
+  color: transparent;
+}
+
+.boton-enviar.cargando::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

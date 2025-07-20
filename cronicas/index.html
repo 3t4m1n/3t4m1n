@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crónicas Musicales - MUGIC!</title>
+    <!-- Fuentes para tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/heavy-heap" rel="stylesheet">
+    <!-- Estilos principales y específicos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/cronicas.css">
+</head>
+<body>
+    <!-- Navegación superior -->
+    <nav class="barra-navegacion">
+        <div class="contenedor">
+            <div class="contenido-nav">
+                <a href="../index.html" class="boton-volver">
+                    <span class="icono-flecha">←</span>
+                    <span>Volver al Inicio</span>
+                </a>
+                <div class="logo-nav">
+                    <span class="icono-libro">📖</span>
+                    <span class="titulo-mugic">MUGIC!</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado principal -->
+    <section class="encabezado-pagina">
+        <div class="contenedor">
+            <h1 class="titulo-principal gradiente-titulo-3">Crónicas Musicales</h1>
+            <p class="descripcion-principal">
+                Historias fascinantes, anécdotas legendarias y momentos que definieron la música tal como la conocemos hoy.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filtros de categorías -->
+    <section class="seccion-filtros">
+        <div class="contenedor">
+            <div class="contenedor-filtros">
+                <button class="boton-filtro activo" data-categoria="todos">Todos</button>
+                <button class="boton-filtro" data-categoria="eventos-historicos">Eventos Históricos</button>
+                <button class="boton-filtro" data-categoria="albumes-legendarios">Álbumes Legendarios</button>
+                <button class="boton-filtro" data-categoria="origenes-musicales">Orígenes Musicales</button>
+                <button class="boton-filtro" data-categoria="evolucion-tecnologica">Evolución Tecnológica</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de crónicas -->
+    <section class="seccion-cronicas">
+        <div class="contenedor">
+            <!-- Vista de grid (por defecto) -->
+            <div class="grid-cronicas" id="gridCronicas">
+                <!-- Crónica: Woodstock 1969 -->
+                <article class="tarjeta-cronica tarjeta-magica" data-categoria="eventos-historicos" data-cronica="woodstock">
+                    <div class="imagen-cronica">
+                        <img src="../imagenes/woodstock-1969.jpg" alt="Festival de Woodstock 1969" loading="lazy">
+                        <div class="overlay-imagen"></div>
+                    </div>
+                    <div class="contenido-cronica">
+                        <div class="etiquetas-cronica">
+                            <span class="etiqueta">Rock</span>
+                            <span class="etiqueta">Contracultura</span>
+                        </div>
+                        <h2 class="titulo-cronica">Woodstock 1969: Tres Días que Cambiaron la Música</h2>
+                        <p class="extracto-cronica">
+                            La historia completa del festival que definió una generación y cambió la música para siempre.
+                        </p>
+                        <div class="meta-cronica">
+                            <div class="info-meta">
+                                <span class="icono-meta">👤</span>
+                                <span>Redacción MUGIC!</span>
+                            </div>
+                            <div class="info-meta">
+                                <span class="icono-meta">📅</span>
+                                <span>15 de Agosto, 2024</span>
+                            </div>
+                            <div class="info-meta">
+                                <span class="icono-meta">⏱️</span>
+                                <span>8 min</span>
+                            </div>
+                        </div>
+                        <div class="accion-cronica">
+                            <span class="texto-leer-mas">Leer más →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Crónica: Abbey Road -->
+                <article class="tarjeta-cronica tarjeta-magica" data-categoria="albumes-legendarios" data-cronica="abbey-road">
+                    <div class="imagen-cronica">
+                        <img src="../imagenes/abbey-road-beatles.jpg" alt="Abbey Road - The Beatles" loading="lazy">
+                        <div class="overlay-imagen"></div>
+                    </div>
+                    <div class="contenido-cronica">
+                        <div class="etiquetas-cronica">
+                            <span class="etiqueta">Beatles</span>
+                            <span class="etiqueta">Rock</span>
+                        </div>
+                        <h2 class="titulo-cronica">Abbey Road: El Último Álbum de los Beatles</h2>
+                        <p class="extracto-cronica">
+                            La historia detrás del icónico cruce de calle y el último álbum grabado por la banda más influyente.
+                        </p>
+                        <div class="meta-cronica">
+                            <div class="info-meta">
+                                <span class="icono-meta">👤</span>
+                                <span>Redacción MUGIC!</span>
+                            </div>
+                            <div class="info-meta">
+                                <span class="icono-meta">📅</span>
+                                <span>10 de Agosto, 2024</span>
+                            </div>
+                            <div class="info-meta">
+                                <span class="icono-meta">⏱️</span>
+                                <span>6 min</span>
+                            </div>
+                        </div>
+                        <div class="accion-cronica">
+                            <span class="texto-leer-mas">Leer más →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Crónica: Hip Hop en el Bronx -->
+                <article class="tarjeta-cronica tarjeta-magica" data-categoria="origenes-musicales" data-cronica="hip-hop-bronx">
+                    <div class="imagen-cronica">
+                        <img src="../imagenes/hip-hop-bronx.jpg" alt="Nacimiento del Hip Hop en el Bronx" loading="lazy">
+                        <div class="overlay-imagen"></div>
+                    </div>
+                    <div class="contenido-cronica">
+                        <div class="etiquetas-cronica">
+                            <span class="etiqueta">Hip Hop</span>
+                            <span class="etiqueta">Bronx</span>
+                        </div>
+                        <h2 class="titulo-cronica">El Nacimiento del Hip Hop en el Bronx</h2>
+                        <p class="extracto-cronica">
+                            Cómo DJ Kool Herc y una fiesta en el Bronx dieron origen al movimiento cultural más influyente.
+                        </p>
+                        <div class="meta-cronica">
+                            <div class="info-meta">
+                                <span class="icono-meta">👤</span>
+                                <span>Redacción MUGIC!</span>
+                            </div>
+                            <div class="info-meta">
+                                <span class="icono-meta">📅</span>
+                                <span>5 de Agosto, 2024</span>
+                            </div>
+                            <div class="info-meta">
+                                <span class="icono-meta">⏱️</span>
+                                <span>7 min</span>
+                            </div>
+                        </div>
+                        <div class="accion-cronica">
+                            <span class="texto-leer-mas">Leer más →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Crónica: Revolución Electrónica -->
+                <article class="tarjeta-cronica tarjeta-magica" data-categoria="evolucion-tecnologica" data-cronica="revolucion-electronica">
+                    <div class="imagen-cronica">
+                        <img src="../imagenes/kraftwerk-electronica.jpg" alt="Kraftwerk y la música electrónica" loading="lazy">
+                        <div class="overlay-imagen"></div>
+                    </div>
+                    <div class="contenido-cronica">
+                        <div class="etiquetas-cronica">
+                            <span class="etiqueta">Electrónica</span>
+                            <span class="etiqueta">Kraftwerk</span>
+                        </div>
+                        <h2 class="titulo-cronica">La Revolución Electrónica: De Kraftwerk a la Pista de Baile</h2>
+                        <p class="extracto-cronica">
+                            Cómo los sintetizadores transformaron la música desde los pioneros alemanes hasta el EDM.
+                        </p>
+                        <div class="meta-cronica">
+                            <div class="info-meta">
+                                <span class="icono-meta">👤</span>
+                                <span>Redacción MUGIC!</span>
+                            </div>
+                            <div class="info-meta">
+                                <span class="icono-meta">📅</span>
+                                <span>1 de Agosto, 2024</span>
+                            </div>
+                            <div class="info-meta">
+                                <span class="icono-meta">⏱️</span>
+                                <span>9 min</span>
+                            </div>
+                        </div>
+                        <div class="accion-cronica">
+                            <span class="texto-leer-mas">Leer más →</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Vista detallada (se muestra al hacer click) -->
+            <div class="vista-detalle" id="vistaDetalle" style="display: none;">
+                <button class="boton-volver-grid" id="botonVolverGrid">
+                    <span class="icono-flecha">←</span>
+                    Volver a las Crónicas
+                </button>
+                
+                <article class="articulo-completo tarjeta-magica">
+                    <div class="encabezado-articulo">
+                        <img class="imagen-articulo" id="imagenArticulo" alt="">
+                        <div class="etiquetas-articulo" id="etiquetasArticulo"></div>
+                        <h1 class="titulo-articulo" id="tituloArticulo"></h1>
+                        <div class="meta-articulo" id="metaArticulo"></div>
+                    </div>
+                    <div class="contenido-articulo" id="contenidoArticulo"></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navegación a otras secciones -->
+    <section class="navegacion-continua">
+        <div class="contenedor">
+            <h3 class="titulo-navegacion gradiente-titulo-3">Explora Más</h3>
+            <div class="botones-navegacion">
+                <a href="../genealogia/index.html" class="boton-magico gradiente-esmeralda">Ver Árbol Genealógico</a>
+                <a href="../laboratorio/index.html" class="boton-magico gradiente-violeta">Jugar Ahora</a>
+                <a href="../galeria/index.html" class="boton-magico gradiente-rosa">Ver Galería</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../js/principal.js"></script>
+    <script src="../js/cronicas.js"></script>
+</body>
+</html>

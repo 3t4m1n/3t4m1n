@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Global - MUGIC!</title>
+    <!-- Fuentes para tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/heavy-heap" rel="stylesheet">
+    <!-- Estilos principales y específicos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/galeria.css">
+</head>
+<body>
+    <!-- Navegación superior -->
+    <nav class="barra-navegacion">
+        <div class="contenedor">
+            <div class="contenido-nav">
+                <a href="../index.html" class="boton-volver">
+                    <span class="icono-flecha">←</span>
+                    <span>Volver al Inicio</span>
+                </a>
+                <div class="logo-nav">
+                    <span class="icono-camara animacion-flotante">📷</span>
+                    <span class="titulo-mugic">MUGIC!</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado principal -->
+    <section class="encabezado-pagina">
+        <div class="contenedor">
+            <h1 class="titulo-principal gradiente-titulo-2">Galería de Imágenes Icónicas</h1>
+            <p class="descripcion-principal">
+                Una colección de las imágenes más emblemáticas de la historia de la música, desde portadas legendarias hasta momentos que definieron generaciones.
+            </p>
+        </div>
+    </section>
+
+    <!-- Búsqueda y filtros -->
+    <section class="seccion-controles">
+        <div class="contenedor">
+            <div class="controles-galeria">
+                <!-- Barra de búsqueda -->
+                <div class="contenedor-busqueda">
+                    <span class="icono-busqueda">🔍</span>
+                    <input type="text" id="campoBusqueda" placeholder="Buscar por artista, título o etiqueta..." class="campo-busqueda">
+                </div>
+                
+                <!-- Filtros de categoría -->
+                <div class="contenedor-filtros">
+                    <button class="boton-filtro activo" data-categoria="todas">Todas</button>
+                    <button class="boton-filtro" data-categoria="portadas-iconicas">Portadas Icónicas</button>
+                    <button class="boton-filtro" data-categoria="actuaciones-legendarias">Actuaciones Legendarias</button>
+                    <button class="boton-filtro" data-categoria="retratos-iconicos">Retratos Icónicos</button>
+                    <button class="boton-filtro" data-categoria="eventos-historicos">Eventos Históricos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de imágenes -->
+    <section class="seccion-galeria">
+        <div class="contenedor">
+            <div class="grid-imagenes" id="gridImagenes">
+                <!-- Las imágenes se cargan dinámicamente -->
+            </div>
+            
+            <!-- Mensaje cuando no hay resultados -->
+            <div class="mensaje-sin-resultados" id="mensajeSinResultados" style="display: none;">
+                <div class="icono-sin-resultados">📷</div>
+                <h3 class="titulo-sin-resultados">No se encontraron imágenes</h3>
+                <p class="texto-sin-resultados">Intenta con otros términos de búsqueda o categorías</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox modal -->
+    <div class="lightbox-overlay" id="lightboxOverlay" style="display: none;">
+        <div class="lightbox-contenedor">
+            <!-- Botones de control -->
+            <button class="boton-cerrar-lightbox" id="botonCerrarLightbox">✕</button>
+            <button class="boton-navegacion boton-anterior" id="botonAnterior">‹</button>
+            <button class="boton-navegacion boton-siguiente" id="botonSiguiente">›</button>
+            
+            <!-- Contenido del lightbox -->
+            <div class="lightbox-contenido">
+                <img class="imagen-lightbox" id="imagenLightbox" alt="">
+                <div class="info-lightbox">
+                    <div class="etiquetas-lightbox" id="etiquetasLightbox"></div>
+                    <h2 class="titulo-lightbox" id="tituloLightbox"></h2>
+                    <p class="artista-lightbox" id="artistaLightbox"></p>
+                    <p class="descripcion-lightbox" id="descripcionLightbox"></p>
+                    <div class="categoria-lightbox" id="categoriaLightbox"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación a otras secciones -->
+    <section class="navegacion-continua">
+        <div class="contenedor">
+            <h3 class="titulo-navegacion gradiente-titulo-2">Continúa Explorando</h3>
+            <div class="botones-navegacion">
+                <a href="../genealogia/index.html" class="boton-magico gradiente-esmeralda">Ver Árbol Genealógico</a>
+                <a href="../cronicas/index.html" class="boton-magico gradiente-cielo">Leer Crónicas</a>
+                <a href="../laboratorio/index.html" class="boton-magico gradiente-violeta">Jugar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../js/principal.js"></script>
+    <script src="../js/galeria.js"></script>
+</body>
+</html>

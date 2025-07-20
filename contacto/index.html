@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - MUGIC!</title>
+    <!-- Fuentes para tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/heavy-heap" rel="stylesheet">
+    <!-- Estilos principales y específicos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body>
+    <!-- Navegación superior -->
+    <nav class="barra-navegacion">
+        <div class="contenedor">
+            <div class="contenido-nav">
+                <a href="../index.html" class="boton-volver">
+                    <span class="icono-flecha">←</span>
+                    <span>Volver al Inicio</span>
+                </a>
+                <div class="logo-nav">
+                    <span class="icono-contacto animacion-flotante">✉️</span>
+                    <span class="titulo-mugic">MUGIC!</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado principal -->
+    <section class="encabezado-pagina">
+        <div class="contenedor">
+            <h1 class="titulo-principal gradiente-titulo-6">Contacto</h1>
+            <p class="descripcion-principal">
+                ¿Tienes preguntas, sugerencias o quieres colaborar? ¡Nos encantaría escucharte!
+            </p>
+        </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <section class="seccion-contacto">
+        <div class="contenedor">
+            <div class="grid-contacto">
+                <!-- Formulario de contacto -->
+                <div class="columna-formulario">
+                    <div class="tarjeta-formulario tarjeta-magica">
+                        <h2 class="titulo-formulario">Envíanos un Mensaje</h2>
+                        
+                        <form class="formulario-contacto" id="formularioContacto">
+                            <div class="grupo-campo">
+                                <label for="nombre" class="etiqueta-campo">Nombre Completo</label>
+                                <input type="text" id="nombre" name="nombre" class="campo-entrada" required>
+                                <span class="mensaje-error" id="errorNombre"></span>
+                            </div>
+                            
+                            <div class="grupo-campo">
+                                <label for="email" class="etiqueta-campo">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" class="campo-entrada" required>
+                                <span class="mensaje-error" id="errorEmail"></span>
+                            </div>
+                            
+                            <div class="grupo-campo">
+                                <label for="asunto" class="etiqueta-campo">Asunto</label>
+                                <select id="asunto" name="asunto" class="campo-entrada" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="pregunta">Pregunta General</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="colaboracion">Colaboración</option>
+                                    <option value="error">Reportar Error</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <span class="mensaje-error" id="errorAsunto"></span>
+                            </div>
+                            
+                            <div class="grupo-campo">
+                                <label for="mensaje" class="etiqueta-campo">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" class="campo-entrada campo-textarea" rows="5" required placeholder="Cuéntanos más sobre tu consulta..."></textarea>
+                                <span class="mensaje-error" id="errorMensaje"></span>
+                            </div>
+                            
+                            <button type="submit" class="boton-enviar boton-magico gradiente-coral">
+                                <span class="texto-boton">Enviar Mensaje</span>
+                                <span class="icono-boton">📤</span>
+                            </button>
+                        </form>
+                        
+                        <!-- Mensaje de confirmación -->
+                        <div class="mensaje-confirmacion" id="mensajeConfirmacion" style="display: none;">
+                            <div class="icono-confirmacion">✅</div>
+                            <h3 class="titulo-confirmacion">¡Mensaje Enviado!</h3>
+                            <p class="texto-confirmacion">Gracias por contactarnos. Te responderemos pronto.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Información del proyecto -->
+                <div class="columna-info">
+                    <div class="tarjeta-info tarjeta-magica">
+                        <h2 class="titulo-info">Sobre el Proyecto</h2>
+                        
+                        <div class="seccion-info">
+                            <h3 class="subtitulo-info">📚 Información Académica</h3>
+                            <div class="contenido-info">
+                                <p><strong>Proyecto:</strong> MUGIC! - Genealogía Musical Interactiva</p>
+                                <p><strong>Curso:</strong> Desarrollo Web Frontend</p>
+                                <p><strong>Institución:</strong> Universidad Tecnológica</p>
+                                <p><strong>Año:</strong> 2024</p>
+                            </div>
+                        </div>
+                        
+                        <div class="seccion-info">
+                            <h3 class="subtitulo-info">👨‍💻 Desarrollador</h3>
+                            <div class="contenido-info">
+                                <p><strong>Estudiante:</strong> [Tu Nombre]</p>
+                                <p><strong>Carrera:</strong> Ingeniería en Sistemas</p>
+                                <p><strong>Semestre:</strong> 6to Semestre</p>
+                                <p><strong>Email:</strong> estudiante@universidad.edu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="seccion-info">
+                            <h3 class="subtitulo-info">🛠️ Tecnologías Utilizadas</h3>
+                            <div class="contenido-info">
+                                <div class="lista-tecnologias">
+                                    <span class="tecnologia">HTML5</span>
+                                    <span class="tecnologia">CSS3</span>
+                                    <span class="tecnologia">JavaScript ES6+</span>
+                                    <span class="tecnologia">Responsive Design</span>
+                                    <span class="tecnologia">CSS Grid & Flexbox</span>
+                                    <span class="tecnologia">Animaciones CSS</span>
+                                    <span class="tecnologia">Local Storage</span>
+                                    <span class="tecnologia">Intersection Observer</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="seccion-info">
+                            <h3 class="subtitulo-info">🎯 Objetivos del Proyecto</h3>
+                            <div class="contenido-info">
+                                <ul class="lista-objetivos">
+                                    <li>Crear una experiencia web interactiva y educativa</li>
+                                    <li>Implementar diseño responsive y accesible</li>
+                                    <li>Demostrar conocimientos de frontend moderno</li>
+                                    <li>Promover la diversidad musical global</li>
+                                    <li>Aplicar principios de UX/UI design</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="seccion-info">
+                            <h3 class="subtitulo-info">📊 Características Técnicas</h3>
+                            <div class="contenido-info">
+                                <ul class="lista-caracteristicas">
+                                    <li>✅ Diseño Mobile-First</li>
+                                    <li>✅ Navegación SPA (Single Page Application)</li>
+                                    <li>✅ Componentes interactivos</li>
+                                    <li>✅ Optimización de performance</li>
+                                    <li>✅ SEO básico implementado</li>
+                                    <li>✅ Accesibilidad web (WCAG)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta de redes sociales -->
+                    <div class="tarjeta-redes tarjeta-magica">
+                        <h3 class="titulo-redes">Síguenos</h3>
+                        <div class="enlaces-redes">
+                            <a href="#" class="enlace-red" data-red="github">
+                                <span class="icono-red">🐙</span>
+                                <span class="nombre-red">GitHub</span>
+                            </a>
+                            <a href="#" class="enlace-red" data-red="linkedin">
+                                <span class="icono-red">💼</span>
+                                <span class="nombre-red">LinkedIn</span>
+                            </a>
+                            <a href="#" class="enlace-red" data-red="twitter">
+                                <span class="icono-red">🐦</span>
+                                <span class="nombre-red">Twitter</span>
+                            </a>
+                            <a href="#" class="enlace-red" data-red="instagram">
+                                <span class="icono-red">📸</span>
+                                <span class="nombre-red">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navegación a otras secciones -->
+    <section class="navegacion-continua">
+        <div class="contenedor">
+            <h3 class="titulo-navegacion gradiente-titulo-6">Explora el Proyecto</h3>
+            <div class="botones-navegacion">
+                <a href="../genealogia/index.html" class="boton-magico gradiente-esmeralda">Ver Árbol Genealógico</a>
+                <a href="../laboratorio/index.html" class="boton-magico gradiente-violeta">Jugar en el Laboratorio</a>
+                <a href="../galeria/index.html" class="boton-magico gradiente-rosa">Ver Galería</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../js/principal.js"></script>
+    <script src="../js/contacto.js"></script>
+</body>
+</html>

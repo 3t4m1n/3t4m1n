@@ -1,0 +1,385 @@
+/* 
+   ESTILOS ESPECÍFICOS PARA EL LABORATORIO MUSICAL
+   Juego interactivo de combinación de géneros musicales
+*/
+
+/* Contenedor principal del laboratorio */
+.seccion-generos {
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #ddd6fe 100%);
+  min-height: 80vh;
+}
+
+/* Estadísticas del juego */
+.estadisticas-juego {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Tarjeta individual de estadística */
+.tarjeta-estadistica {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Icono de estadística */
+.icono-estadistica {
+  font-size: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Texto de estadística */
+.texto-estadistica {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-estadistica {
+  font-size: 0.875rem;
+  color: #7c3aed;
+  font-weight: 500;
+}
+
+.valor-estadistica {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #5b21b6;
+}
+
+/* Botón de reiniciar */
+.boton-reiniciar {
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+/* Mensaje del juego */
+.mensaje-juego {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  animation: aparecer 0.3s ease-out;
+}
+
+.tarjeta-mensaje {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+}
+
+.texto-mensaje {
+  color: #5b21b6;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Panel de mezcla */
+.panel-mezcla {
+  padding: 2rem 1rem;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+}
+
+.tarjeta-mezcla {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.titulo-mezcla {
+  text-align: center;
+  color: #5b21b6;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.contenido-mezcla {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.genero-seleccionado {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #c4b5fd;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  min-width: 120px;
+  transition: all 0.3s ease;
+}
+
+.genero-seleccionado.activo {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.emoji-genero {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.nombre-genero {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #5b21b6;
+}
+
+.simbolo-mas,
+.simbolo-igual {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8b5cf6;
+}
+
+.resultado-mezcla {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: white;
+  border: none;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Grid de géneros */
+.grid-generos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Tarjeta de género individual */
+.tarjeta-genero {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Estados de la tarjeta de género */
+.tarjeta-genero.disponible {
+  border-color: rgba(139, 92, 246, 0.2);
+}
+
+.tarjeta-genero.disponible:hover {
+  transform: translateY(-5px) scale(1.05);
+  border-color: #8b5cf6;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+}
+
+.tarjeta-genero.seleccionada {
+  border-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+}
+
+.tarjeta-genero.bloqueada {
+  background: rgba(156, 163, 175, 0.3);
+  border-color: rgba(156, 163, 175, 0.2);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Contenido de la tarjeta de género */
+.icono-genero-grande {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.titulo-genero-lab {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #5b21b6;
+  margin-bottom: 0.5rem;
+}
+
+.descripcion-genero-lab {
+  font-size: 0.75rem;
+  color: #7c3aed;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.info-comunidad-lab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.icono-usuarios-lab {
+  font-size: 0.875rem;
+  color: #8b5cf6;
+}
+
+.texto-comunidad-lab {
+  font-size: 0.625rem;
+  color: #7c3aed;
+  text-align: center;
+}
+
+/* Etiqueta de estado */
+.etiqueta-estado {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50px;
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.etiqueta-tradicional {
+  background: #ddd6fe;
+  color: #5b21b6;
+}
+
+.etiqueta-bloqueada {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Sección de instrucciones */
+.seccion-instrucciones {
+  padding: 4rem 1rem;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.1), rgba(168, 85, 247, 0.1));
+}
+
+.tarjeta-instrucciones {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.titulo-instrucciones {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contenido-instrucciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.subtitulo-instrucciones {
+  color: #5b21b6;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.lista-instrucciones,
+.lista-ejemplos {
+  color: #7c3aed;
+  line-height: 1.6;
+}
+
+.lista-instrucciones li,
+.lista-ejemplos li {
+  margin-bottom: 0.5rem;
+}
+
+/* Animaciones */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .estadisticas-juego {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenido-mezcla {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .simbolo-mas,
+  .simbolo-igual {
+    transform: rotate(90deg);
+  }
+
+  .contenido-instrucciones {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .grid-generos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-generos {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-genero {
+    padding: 1rem;
+  }
+
+  .icono-genero-grande {
+    font-size: 2.5rem;
+  }
+}

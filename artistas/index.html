@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidades Musicales - MUGIC!</title>
+    <!-- Fuentes para tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/heavy-heap" rel="stylesheet">
+    <!-- Estilos principales y específicos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/artistas.css">
+</head>
+<body>
+    <!-- Navegación superior -->
+    <nav class="barra-navegacion">
+        <div class="contenedor">
+            <div class="contenido-nav">
+                <a href="../index.html" class="boton-volver">
+                    <span class="icono-flecha">←</span>
+                    <span>Volver al Inicio</span>
+                </a>
+                <div class="logo-nav">
+                    <span class="icono-comunidad animacion-flotante">👥</span>
+                    <span class="titulo-mugic">MUGIC!</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado principal -->
+    <section class="encabezado-pagina">
+        <div class="contenedor">
+            <h1 class="titulo-principal gradiente-titulo-5">Comunidades Musicales</h1>
+            <p class="descripcion-principal">
+                Celebrando la diversidad musical mundial con una perspectiva decolonial e inclusiva que honra todas las tradiciones y comunidades.
+            </p>
+        </div>
+    </section>
+
+    <!-- Controles de búsqueda y filtros -->
+    <section class="seccion-controles">
+        <div class="contenedor">
+            <div class="controles-artistas">
+                <!-- Barra de búsqueda -->
+                <div class="contenedor-busqueda">
+                    <span class="icono-busqueda">🔍</span>
+                    <input type="text" id="campoBusqueda" placeholder="Buscar artistas, géneros o regiones..." class="campo-busqueda">
+                </div>
+                
+                <!-- Filtros por región -->
+                <div class="contenedor-filtros">
+                    <button class="boton-filtro activo" data-region="todas">Todas las Regiones</button>
+                    <button class="boton-filtro" data-region="africa">África</button>
+                    <button class="boton-filtro" data-region="america">América</button>
+                    <button class="boton-filtro" data-region="asia">Asia</button>
+                    <button class="boton-filtro" data-region="europa">Europa</button>
+                    <button class="boton-filtro" data-region="oceania">Oceanía</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de artistas y comunidades -->
+    <section class="seccion-artistas">
+        <div class="contenedor">
+            <div class="grid-artistas" id="gridArtistas">
+                <!-- Los artistas se cargan dinámicamente -->
+            </div>
+            
+            <!-- Mensaje cuando no hay resultados -->
+            <div class="mensaje-sin-resultados" id="mensajeSinResultados" style="display: none;">
+                <div class="icono-sin-resultados">🎵</div>
+                <h3 class="titulo-sin-resultados">No se encontraron artistas</h3>
+                <p class="texto-sin-resultados">Intenta con otros términos de búsqueda o regiones</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de detalle de artista -->
+    <div class="modal-artista" id="modalArtista" style="display: none;">
+        <div class="contenido-modal">
+            <button class="boton-cerrar-modal" id="botonCerrarModal">✕</button>
+            
+            <div class="encabezado-modal">
+                <img class="imagen-artista-modal" id="imagenArtistaModal" alt="">
+                <div class="info-principal-modal">
+                    <h2 class="nombre-artista-modal" id="nombreArtistaModal"></h2>
+                    <p class="origen-artista-modal" id="origenArtistaModal"></p>
+                    <div class="generos-artista-modal" id="generosArtistaModal"></div>
+                </div>
+            </div>
+            
+            <div class="cuerpo-modal">
+                <div class="descripcion-artista-modal" id="descripcionArtistaModal"></div>
+                
+                <div class="contribuciones-section">
+                    <h3 class="subtitulo-modal">Contribuciones Musicales</h3>
+                    <div class="lista-contribuciones" id="listaContribuciones"></div>
+                </div>
+                
+                <div class="contexto-section">
+                    <h3 class="subtitulo-modal">Contexto Cultural</h3>
+                    <div class="contexto-cultural" id="contextoCultural"></div>
+                </div>
+                
+                <div class="legado-section">
+                    <h3 class="subtitulo-modal">Legado e Influencia</h3>
+                    <div class="legado-artista" id="legadoArtista"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación a otras secciones -->
+    <section class="navegacion-continua">
+        <div class="contenedor">
+            <h3 class="titulo-navegacion gradiente-titulo-5">Continúa Explorando</h3>
+            <div class="botones-navegacion">
+                <a href="../genealogia/index.html" class="boton-magico gradiente-esmeralda">Ver Árbol Genealógico</a>
+                <a href="../historia/index.html" class="boton-magico gradiente-ambar">Ver Historia</a>
+                <a href="../contacto/index.html" class="boton-magico gradiente-coral">Contacto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../js/principal.js"></script>
+    <script src="../js/artistas.js"></script>
+</body>
+</html>
